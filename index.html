@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,700&display=swap" rel="stylesheet">
+
+<body>
+    <nav>
+        <img src="logo.png" alt="">
+        <div>
+            <a href="bilan.html">Bilan</a>
+            <a href="error.html">Site d'Iqra</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="crea.html">Libre</a>
+            <a href="index.html" class="connect">
+
+                Se Connecter
+            </a>
+        </div>
+    </nav>
+    <main class="index_main">
+        <section>
+            <div class="index_main_titles">
+                <h1>BIENVENUE !</h1>
+                <p> Rejoins-nous...</p>
+            </div>
+            
+
+            <form method="get" action="" class="index_body">
+                <div>
+                    <label>Prénom</label> : 
+                    <input type="text" name="prenom">
+                </div>
+                
+                <div>
+                    <label>Nom</label> : 
+                    <input type="text" name="nom">
+                </div>
+                
+                <div>
+                    <label for="classe">En quel classe es-tu ?</label>
+                    <select name="classe" id="classe">
+                        <option value="en seconde">en Seconde</option>
+                        <option value="en première">en Première</option>
+                        <option value="en terminale">en Terminale</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="pass">Mot de passe (8 caractères minimum):</label>
+                    <input type="password" id="pass" name="password" minlength="8" required />
+                </div>
+            
+                <input type="submit" value="Valider" onclick = "erreur();"  />
+            </form>
+        </section>
+
+        <section>
+            <img src="index.jpg" alt="">
+        </section>
+    </main>
+   
+</body>
+
+
+</html>

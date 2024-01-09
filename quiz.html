@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,700&display=swap" rel="stylesheet">
+   
+</head>
+
+
+<body class="body_quiz"> 
+ 
+
+  <nav>
+    <img src="logo.png" alt="">
+    <div>
+        <a href="bilan.html">Bilan</a>
+        <a href="error.html">Site d'Iqra</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="crea.html">Libre</a>
+        <a href="index.html" class="connect">
+
+            Se Connecter
+        </a>
+    </div>
+</nav>
+
+    <h1>Quiz :</h1>
+
+    <form id="quizForm">
+      <p>1. Dans quelle écurie Max Verstappen a-t-il commencé sa carrière en F3 ?</p>
+      <label>
+        <input type="radio" name="q1" value="redbulljuniorteam"> RedBull Junior Team
+      </label>
+      <label>
+        <input type="radio" name="q1" value="hwaracelab"> HWA Racelab
+      </label>
+      <label>
+        <input type="radio" name="q1" value="vanamersfoortracing"> Van Amersfoort Racing
+      </label>
+    
+      <p>2. En 2015, Max prend part à sa première course de F1 avec Toro Rosso, mais où ?</p>
+      <label>
+        <input type="radio" name="q2" value="melbourne"> Melbourne
+      </label>
+      <label>
+        <input type="radio" name="q2" value="bahreïn"> Bahreïn
+      </label>
+      <label>
+        <input type="radio" name="q2" value="tokyo"> Tokyo
+      </label>
+    
+      <p>3. En Espagne, il devient également le plus jeune pilote de l'histoire de la F1 à gagner un GP. Mais quel âge avait-il exactement ?</p>
+      <label>
+        <input type="radio" name="q3" value="18ans"> 18 ans
+      </label>
+      <label>
+        <input type="radio" name="q3" value="17ans"> 17 ans
+      </label>
+      <label>
+        <input type="radio" name="q3" value="19ans"> 19 ans
+      </label>
+
+      <p>4. En 2022, le jeune pilote remporte son deuxième titre de champion du monde et bat un record. Lequel ?</p>
+      <label>
+        <input type="radio" name="q4" value="lenombredehattrickssurunesaison"> Le nombre de hat-tricks sur une saison
+      </label>
+      <label>
+        <input type="radio" name="q4" value="lenombredepolepositionssurunesaison"> Le nombre de pole positions sur une saison
+      </label>
+      <label>
+        <input type="radio" name="q4" value="lenombredevictoiressurunesaison"> Le nombre de victoires sur une saison
+      </label>
+
+      <p>5. Le 18 juin 2023, lors du GP du Canada, Max est entré un peu plus dans l'histoire de l'écurie Redbull. Pourquoi ?</p>
+      <label>
+        <input type="radio" name="q5" value="Ilagagneunnouveautitredechampiondumonde"> Il a gagné un nouveau titre de champion du monde
+      </label>
+      <label>
+        <input type="radio" name="q5" value="ilaoffertune100emevictoireasonecurie"> Il a offert une 100ème victoire à son écurie
+      </label>
+      <label>
+        <input type="radio" name="q5" value="ilaeffectueunnombrerecorddedepassements"> Il a effectué un nombre record de dépassements
+      </label>
+    
+      <br><br>
+      <button type="button" onclick="calculateScore()">Résultat</button>
+      <button type="button" onclick="showAnswers()">Réponses</button>
+    </form>
+    
+    <script>
+      function calculateScore() {
+        var score = 0;
+        var questions = document.getElementById('quizForm').getElementsByTagName('input');
+    
+        for (var i = 0; i < questions.length; i++) {
+          if (questions[i].type === 'radio' && questions[i].checked) {
+      
+            if (questions[i].value === 'vanamersfoortracing' || questions[i].value === 'melbourne' || questions[i].value === '18ans' || questions[i].value === 'lenombredevictoiressurunesaison' || questions[i].value === 'ilaoffertune100emevictoireasonecurie') {
+              score++;
+            }
+          }
+        }
+    
+        alert('Votre score est : ' + score + ' sur 5');
+      }
+    
+      function showAnswers() {
+       
+        var answers = {
+          q1: 'Max Verstappen a commencé sa carrière en F3 au Van Amersfoort Racing.',
+          q2: 'Max prend part à sa première course de F1 avec Toro Rosso à Melbourne.',
+          q3: 'Il avait 18 ans.',
+          q4: 'Le nombre de victoires sur une saison',
+          q5: 'Car il a offert une 100ème victoire à son écurie'
+        };
+    
+        var message = 'Réponses:\n\n';
+        for (var key in answers) {
+          if (answers.hasOwnProperty(key)) {
+            message += answers[key] + '\n';
+          }
+        }
+    
+        alert(message);
+      }
+    </script>
+    
+
+
+  
+
+
+</body>
+</html>
