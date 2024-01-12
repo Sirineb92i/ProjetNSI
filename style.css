@@ -396,6 +396,7 @@ main.index_main {
     font-weight: bold;
     font-size: 6em;
     letter-spacing: 8px;
+    color: #ffffff;
 }
 
 .vers .left .titres h1 span {
@@ -417,6 +418,7 @@ main.index_main {
 .vers .left .stats p {
     font-weight: bold;
     font-size: 1.1em;
+    color: #ffffff;
 }
 
 .vers .left .stats p span {
@@ -447,7 +449,9 @@ main.index_main {
     height: 350px;
 }
 .circuit {
-    width: 395px;
+    width: 475px;
+    position: relative;
+    top: 36px;
 }
 .circuitdiv {
     display: flex;
@@ -500,7 +504,7 @@ main.index_main {
 
 .morepersotitres_white {
     font-size: 3em;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .morecasquedr {
@@ -556,7 +560,7 @@ main.index_main {
 }
 
 .moredrapeau h2 {
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 2em;
 }
 
@@ -573,7 +577,7 @@ main.index_main {
 .moretxt h2 {
     font-size: 2em;
     border-bottom: solid 4px #b72525d1;
-    color: black;
+    color: rgb(255, 255, 255);
     width: fit-content;
 }
 
@@ -595,8 +599,12 @@ main.index_main {
 }
 
 .moretxt div .grey {
-    color: rgb(66, 66, 66);
+    color: rgb(125, 124, 124);
 }
+
+.body_crea {
+    background-color: rgb(29, 27, 27);
+    }
 
 /* Nav */
 nav {
@@ -641,6 +649,8 @@ nav div .connect:hover {
     color: black;
     transition: ease 0.2s;
 }
+
+
 
 /* Quiz */
 
